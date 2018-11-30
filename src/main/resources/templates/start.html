@@ -1,0 +1,99 @@
+<html xmlns="http://thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="../static/css/popul.css" th:href="@{/css/popul.css}" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" th:scr="@{/js/main.js}" scr="../static/js/main.js"></script>
+</head>
+<body>
+<div  class="alert alert-info" role="alert">
+   <h3>CRUD приложение(перед отправкой сообщений нужно отключить безопасность!!!)
+   </h3>
+</div>
+
+<div  class='btn btn-primary open_popup insert' role="alert" data-value="3" style="left: 50%">
+    <p>Insert new RECORDS</p>
+</div>
+<div  e_m="" class='btn btn-primary open_popup insert' role="alert" data-value="4" style="left: 50%">
+    <p>Send E_mail</p>
+</div>
+<div class="bg-wrapper"></div>
+<div class="container">
+    <div class="card">
+        <div class="card-block">
+            <table class=" table table-hover">
+                <thead>
+                <tr>
+                    <th>ID_genre</th>
+                    <th>Name genre</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item:${genreList}">
+                    <td th:text="${item.genreID}"></td>
+                    <td th:text="${item.title}"></td>
+                    <td><p th:genre-ID="${item.genreID}" class='btn btn-primary open_popup' data-value='1'>Edit</p></td>
+                    <td><p th:genre-ID=${item.genreID} class='btn btn-primary open_popup' data-value="2">Delete</p></td>
+                    <td><p th:e_m=${item.toString()} class='btn btn-primary open_popup' data-value="4">Send E_mail</p></td>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<---------------Send Mail--------------------->
+<div class="popup-block popup_4">
+    <div class="popup-container">
+        <span class="close-popup">x</span>
+        <h4 style="text-align: center;">Введите необходимые данные для отправки E_mail</h4>
+        <form method="post" action="/startE">
+            <p style="text-align: center;" >E_mail получателя</p><br>
+            <center><input type="email" name="mail" required/>
+            <p style="text-align: center;">Tema</p><br>
+             <input type="text"  required name="subject"  style="margin: 0 100px; width: 80px;">
+            <textarea name="content" rows="10" cols="30" class=" text-area"></textarea>
+            <input type="submit" value="SEND" class="okno-button">
+            </center>
+        </form>
+    </div>
+</div>
+<!-------------Delete window---------->
+<div class="popup-block popup_1">
+    <div class="popup-container">
+        <span class="close-popup">x</span>
+        <h4 style="text-align: center;">Обновление данных:</h4>
+        <form method="post" action="/update">
+            <input type="hidden" name="hiden_Ganre" value="" class="hiden-Ganre"/>
+                <p>Название жанра<input pattern="^[А-Яа-яЁё\s\.]+$" type="text" required  name="title" class="title" /></p>
+             <input type="submit" value="Update" class="okno-button"
+                                      style="margin: 0 50px; width: 90px;">
+        </form>
+    </div>
+</div>
+<div class="popup-block popup_2">
+    <div class="popup-container">
+        <span class="close-popup">x</span>
+        <h4 style="text-align: center;">Подтвертиде удаление записи!!!</h4>
+        <form method="post" action="/delete">
+            <input type="hidden" name="hiden_Ganre" value="" class="hiden-Ganre"/>
+            <input type="submit" pattern="[A-Za-zА-Яа-яЁё]" value="Delete" required class="okno-button"
+                   style="margin: 0 100px; width: 80px;">
+        </form>
+    </div>
+</div>
+<div class="popup-block popup_3">
+    <div class="popup-container">
+        <span class="close-popup">x</span>
+        <h4 style="text-align: center;">Добавление новых данных:</h4>
+        <form method="post" action="/insert">
+            <!--<input type="number" name="hiden_Ganre" value="" class="hiden-Ganre"/>-->
+            <p>Название жанра:<input type="text" pattern="^[А-Яа-яЁё\s\.]+$" required  name="title" class="title" /></p>
+            <input type="submit" value="Insert" class="okno-button1">
+        </form>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

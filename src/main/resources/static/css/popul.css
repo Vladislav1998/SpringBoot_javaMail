@@ -1,0 +1,121 @@
+.bg-wrapper {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    display: none;
+}
+.popup-container {
+    position: relative;
+}
+.close-popup {
+    z-index: 100;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ccc;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    right: -20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    top: -40px;
+    width: 24px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close-popup:hover {
+    cursor: pointer;
+    background: darkred;
+}
+.popup-block {
+    width: 200px;
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    z-index: 40;
+    display: none;
+    border: 10px solid #ddd;
+    border-radius: 10px;
+    color: black;
+    font: 18px bold Verdana sans-serif;
+    background: #fff;
+}
+.okno-button {
+    background: #ddd;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.okno-button1 {
+    margin: 0 65px;
+    width: 80px;
+    text-align: center;
+    background: #ddd;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.btn{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    position: relative;
+    left: 50px;
+}
+.btn.insert{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    position: relative;
+    left: 150px;
+}
+.okno-button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+.popup_1 {
+    width: 250px;
+    height: 150px;
+}
+.popup_2 {
+    width: 350px;
+    height: 100px;
+}
+.popup_3 {
+    width: 250px;
+    height: 170px;
+}
+.popup_4 {
+    width: 400px;
+
+}
+.open-window:hover {
+    cursor: pointer;
+}
+.select-item{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    margin:  0 70px;
+}
+.select-item select{
+    width: 200px;
+    height: 25px;
+}
+
+.text-area{
+    width: 350px;
+    height: 220px;
+    margin: 8px;
+}
