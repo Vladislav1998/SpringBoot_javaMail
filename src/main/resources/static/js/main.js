@@ -23,9 +23,9 @@ $('.open_popup').click(function () {
         var elem = $(className).find('.hiden-Ganre');
         elem.val(dataNew);
     }
-    if ($(this).attr('feature') !== null) {
-        var feat = $(this).attr('feature');
-        var elemF = $(className).find('.hiden-feature');
+    if ($(this).attr('title-class') !== null) {
+        var feat = $(this).attr('title-class');
+        var elemF = $(className).find('.title');
         elemF.val(feat);
     }
     if ($(this).attr('e_m') != null) {

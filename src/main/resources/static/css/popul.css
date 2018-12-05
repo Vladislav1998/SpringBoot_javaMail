@@ -46,14 +46,14 @@
     top: 100px;
     z-index: 40;
     display: none;
-    border: 10px solid #ddd;
+    border: 10px solid #c4e3f3;
     border-radius: 10px;
     color: black;
     font: 18px bold Verdana sans-serif;
-    background: #fff;
+    background: #c4e3f3;
 }
 .okno-button {
-    background: #ddd;
+    background: #c4e3f3;
     font-size: 16px;
     border-radius: 5px;
     padding: 5px 10px;
@@ -62,7 +62,7 @@
     margin: 0 65px;
     width: 80px;
     text-align: center;
-    background: #ddd;
+    background: #c4e3f3;
     font-size: 16px;
     border-radius: 5px;
     padding: 5px 10px;
@@ -100,6 +100,10 @@
 .popup_4 {
     width: 400px;
 
+}
+.popup_5 {
+    width: 400px;
+    height: 500px;
 }
 .open-window:hover {
     cursor: pointer;

@@ -29,7 +29,6 @@ public class HomeController {
         return "start";
     }
 
-
     @RequestMapping(value = "/startE",method = RequestMethod.POST)
     public String mail(Model model,@RequestParam String mail,@RequestParam String subject,@RequestParam String content) throws IOException, MessagingException {
         List<Genre> genreList = genreRepository.findAll();
