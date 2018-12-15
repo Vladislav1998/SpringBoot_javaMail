@@ -69,7 +69,7 @@ public class HomeController {
 
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("vados.shestopalov1998@gmail.com", "azsxdc030698");
+                return new PasswordAuthentication("....enter_you_mail", "....enter_you_pass");
             }
         });
         Message msg = new MimeMessage(session);
