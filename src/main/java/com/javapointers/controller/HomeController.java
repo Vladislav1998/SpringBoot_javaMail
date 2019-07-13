@@ -73,7 +73,7 @@ public class HomeController {
             }
         });
         Message msg = new MimeMessage(session);
-        msg.setFrom(new InternetAddress("vados.shestopalov1998@gmail.com", false));
+        msg.setFrom(new InternetAddress("..enter_email", false));
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(mail));
         msg.setSubject(subject);
         msg.setContent(content, "text/html;charset=utf-8");
